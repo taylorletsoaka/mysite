@@ -10,7 +10,7 @@ class IndexView(generic.ListView):
     context_object_name = 'latest_question_list'
 
     def get_queryset(self):
-        return Question.objects.order_by('published')[:5]
+        return Question.objects.order_by('-published')[:5]
 
 # def index(request):
 #    latest_question_list = Question.objects.order_by('-published')[:5]
